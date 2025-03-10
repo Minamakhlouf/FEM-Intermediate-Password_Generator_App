@@ -1,0 +1,154 @@
+.form {
+    background-color: rgb(36, 35, 44);
+    padding: 16px; 
+}
+
+.character-flex {
+    margin-bottom: .5rem; 
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+}
+
+.character-flex span:first-of-type {
+    color: #E6E5EA; 
+    font-size: 1rem; 
+}
+
+.character-flex span:last-of-type {
+    color: #A4FFaf; 
+    font-size: 1.5rem; 
+    font-weight: bold; 
+}
+
+.slider-container {
+    position: relative; 
+    height: 28px; 
+    margin-bottom: 2rem; 
+    display: flex;
+    align-items: center;
+}
+
+.input-container {
+    height: 28px; 
+}
+
+input[type="range"] {
+    position: absolute; 
+    top: 50%; 
+    left: 0; 
+    transform: translateY(-50%);
+    z-index: 5; 
+    opacity: 0; 
+}
+
+.slider {
+    width: 100%; 
+    height: 8px; 
+    background-color: black;
+    border-radius: 3px; 
+    position: relative; 
+}
+
+.circle-container {
+    position: relative; 
+    width: calc(100% - 28px); 
+    cursor: pointer; 
+    height: 8px; 
+}
+
+.circle {
+    position: absolute; 
+    top: 50%; 
+    left: 14px;  
+    width: 28px; 
+    aspect-ratio: 1;
+    border-radius: 50%; 
+    background-color: white;
+    border: 1px solid black; 
+    transform: translateY(-50%); 
+    z-index: 3; 
+    transition: background-color 0.2s ease-in, border 0.2s ease-in; 
+}
+
+.slider-container:hover .circle {
+    background-color: black;
+    border: 1px solid #A4FFaf;
+}
+
+.slider-container:focus-within .slider {
+    outline: 1px solid white; 
+}
+
+.slider-container:focus-within .circle {
+    background-color: black;
+    border: 1px solid #A4FFaf;
+}
+
+.progress {
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    height: 8px; 
+    width: 100%; 
+    background-color: #A4FFaf;
+}
+
+.checkbox-container {
+    display: flex; 
+    flex-direction: column;
+    gap: 1.1875rem; 
+    margin-bottom: 2rem; 
+}
+
+.button {
+    width: 100%; 
+    padding: 1.125rem; 
+    cursor: pointer; 
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem; 
+    font-size: 1.125rem; 
+    font-family: inherit; 
+    text-transform: uppercase;
+    color: #24232c; 
+    background-color: #A4FFaf; 
+    transition: all 0.2s ease-in; 
+    border: 1px solid transparent; 
+}
+
+.button.error {
+    background-color: #F64A4A;
+    color: white; 
+}
+
+.button svg {
+    color: #24232c; 
+}
+
+.button:hover {
+    background-color: #24232c;
+    color: #A4FFaf; 
+    border: 1px solid #A4FFaf; 
+}
+
+.button:hover svg {
+    color: #AFffaf; 
+}
+
+@media screen and (min-width: 768px) {
+    .form {
+        padding: 1.5rem 2rem; 
+    }
+    .character-flex {
+        margin-bottom: 1rem; 
+    }
+    .character-flex span:first-of-type {
+        font-size: 1.125rem; 
+    }
+    
+    .character-flex span:last-of-type {
+        font-size: 2rem; 
+    }
+}
