@@ -57,3 +57,9 @@ label {
     color: #E6E5EA; 
     font-size: 1rem; 
 }
+
+@media screen and (min-width: 768px) {
+    label {
+        font-size: 1.125rem; 
+    }
+}
